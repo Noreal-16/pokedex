@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Assets/css/newPokemon.css";
+import {useForm} from "../Hooks/useForm";
 
 export const NewPokemon = () => {
+    const {number, name, kind, weight, height, moves, image, color, onInputChange} = useForm({
+        number:'', name:'', kind:'', weight:'', height:'', moves:'', image:'', color:''
+    })
     return (
         <>
             <h1 className=" title-form">New Pokemon</h1>
@@ -9,35 +13,43 @@ export const NewPokemon = () => {
                 <form>
                     <div className="colum-input">
                         <label className="label-form">Number</label>
-                        <input className="input-form" type="text" name="number" placeholder="#007"/>
+                        <input className="input-form" type="text" name="number" value={number} onChange={onInputChange}
+                               placeholder="Number"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Name</label>
-                        <input className="input-form" type="text" name="name" placeholder="#007"/>
+                        <input className="input-form" type="text" name="name" value={name} onChange={onInputChange}
+                               placeholder="Name Pokemon"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Kind</label>
-                        <input className="input-form" type="text" name="kind" placeholder="#007"/>
+                        <input className="input-form" type="text" name="kind" value={kind} onChange={onInputChange}
+                               placeholder="Kind"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Weight</label>
-                        <input className="input-form" type="text" name="weight" placeholder="#007"/>
+                        <input className="input-form" type="text" name="weight" value={weight} onChange={onInputChange}
+                               placeholder="Weight"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Height</label>
-                        <input className="input-form" type="text" name="height" placeholder="#007"/>
+                        <input className="input-form" type="text" name="height" value={height} onChange={onInputChange}
+                               placeholder="Height"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Moves</label>
-                        <input className="input-form" type="text" name="moves" placeholder="#007"/>
+                        <input className="input-form" type="text" name="moves" value={moves} onChange={onInputChange}
+                               placeholder="Moves"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Image</label>
-                        <input className="input-form" type="text" name="image" placeholder="#007"/>
+                        <input className="input-form" type="text" name="image" value={image} onChange={onInputChange}
+                               placeholder="URL Image"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Color</label>
-                        <input className="input-form" type="text" name="color" placeholder="#007"/>
+                        <input className="input-form" type="text" name="color" value={color} onChange={onInputChange}
+                               placeholder="#FFFFF"/>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Description</label>

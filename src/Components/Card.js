@@ -1,14 +1,26 @@
-import React from "react";
 import "../Assets/css/card.css";
-import pk1 from '../Assets/img/img.png';
-export const Card = ({descrciptionI}) => {
+
+export const Card = ({descrciptionI, dataP, search}) => {
+
     return (
-        <div className="container-card" onClick={()=>descrciptionI(false)} >
-            <p>#001</p>
-            <img alt="" className="img-card" src={pk1}/>
-            <div className="container-card-foot">
-                <h2 className="h2-text-card">Budbasur</h2>
-            </div>
+        <div className="container-card-group">
+            {!search &&
+                <div className="container-card" style={{borderColor: dataP.color}} onClick={() => descrciptionI(false)}>
+                    <p style={{color: dataP.color}}>{`#00${dataP.id}`}</p>
+                    <img alt="" className="img-card" src={dataP.image}/>
+                    <div className="container-card-foot" style={{background: dataP.color}}>
+                        <h2 className="h2-text-card">{dataP.name}</h2>
+                    </div>
+                </div>}
+            {search === dataP.name &&
+                <div className="container-card"  style={{borderColor: dataP.color}} onClick={() => descrciptionI(false)}>
+                    <p style={{color: dataP.color}}>{`#00${dataP.id}`}</p>
+                    <img alt="" className="img-card" src={dataP.image}/>
+                    <div className="container-card-foot" style={{background: dataP.color}}>
+                        <h2 className="h2-text-card">{dataP.name}</h2>
+                    </div>
+                </div>}
+
         </div>
     )
 }
