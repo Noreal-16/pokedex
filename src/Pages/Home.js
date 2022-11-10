@@ -9,14 +9,17 @@ import {useFecthHook} from "../Hooks/useFecthHook";
 
 export const Home = () => {
     const [state, setState] = useState(true);
-    const [description, setDescription] = useState(true);
+    const [description, setDescription] = useState({
+        status: true,
+        id: 0
+    });
+    const {id} = description;
     const [buscador, setBuscador] = useState();
     const URL = "https://consultasecuador.com/api/pokemon";
     const {data, loading} = useFecthHook(URL);
-
     return (
         <div className='container-home'>
-            {description ?
+            {description.status ?
                 <>
                     <div>
                         <Head stateF={setState}/>
@@ -35,8 +38,8 @@ export const Home = () => {
                             }
                         </>
                         : <div className="container-form-i"><NewPokemon/></div>}
-                </> : <div className="container-home centrar-div" style={{background: "#74CB48"}}>
-                    <DescriptionPokemon stateH={setDescription}/></div>}
+                </> : <div className="" style={{background: "#74CB48"}}>
+                    <DescriptionPokemon stateH={id} dataP={data}/></div>}
         </div>
     )
 }

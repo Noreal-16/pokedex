@@ -1,18 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import {InfoPokemonDesc} from "./InfoPokemonDesc";
 
-export const CardDescription = () => {
+export const CardDescription = ({type, description, height, weight }) => {
+    const [getType] = useState(type.split(","));
     return (
         <div className="container-description">
             <div className="container-nav">
-                <nav className="nav-info">Grass</nav>
-                <nav className="nav-info">Poison</nav>
+                {getType.map((dataType)=>
+                    <nav className="nav-info">{dataType}</nav>
+                )}
             </div>
             <h2 className="h2-about">About</h2>
             <div className="container-inf-desc">
-            <InfoPokemonDesc/>
+            <InfoPokemonDesc height={height} weight={weight} />
             </div>
-            <p className="desc-info">There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.</p>
+            <p className="desc-info">{description}</p>
         <button className="buton-delete"> Delete Pokemon</button>
         </div>
     )

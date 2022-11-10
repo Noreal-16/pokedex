@@ -5,7 +5,8 @@ export const Card = ({descrciptionI, dataP, search}) => {
     return (
         <div className="container-card-group">
             {!search &&
-                <div className="container-card" style={{borderColor: dataP.color}} onClick={() => descrciptionI(false)}>
+                <div className="container-card" style={{borderColor: dataP.color}}
+                     onClick={() => descrciptionI({status: false, id: dataP.id})}>
                     <p style={{color: dataP.color}}>{`#00${dataP.id}`}</p>
                     <img alt="" className="img-card" src={dataP.image}/>
                     <div className="container-card-foot" style={{background: dataP.color}}>
@@ -13,7 +14,8 @@ export const Card = ({descrciptionI, dataP, search}) => {
                     </div>
                 </div>}
             {search === dataP.name &&
-                <div className="container-card"  style={{borderColor: dataP.color}} onClick={() => descrciptionI(false)}>
+                <div className="container-card" style={{borderColor: dataP.color}}
+                     onClick={() => descrciptionI({status: false, id: dataP.id})}>
                     <p style={{color: dataP.color}}>{`#00${dataP.id}`}</p>
                     <img alt="" className="img-card" src={dataP.image}/>
                     <div className="container-card-foot" style={{background: dataP.color}}>
