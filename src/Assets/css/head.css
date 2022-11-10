@@ -1,0 +1,43 @@
+
+.container-head{
+    width: 272px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+}
+.logo-pkb{
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 4px;
+
+}
+.title-head{
+    /* Poppins Bold 24 */
+    font-family: var(--Poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 1vw;
+    margin-right: 12vw;
+}
+.button-head{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 2px 0px 0px;
+    gap: 10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #009688;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.button-add{
+    height: 27px;
+    margin-left: -0.2vw;
+    padding: 2px;
+}

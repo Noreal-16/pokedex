@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Poppins;
+  src: url(./Fonts/Poppins-Bold.ttf) format("opentype");
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./Fonts/Poppins-Regular.ttf) format("opentype");
+}
+@font-face {
+  font-family: Inter-Regular;
+  src: url(./Fonts/Inter-Regular.ttf) format("opentype");
+}
+@font-face {
+  font-family: Karla-bold;
+  src: url(./Fonts/Karla-Bold.ttf) format("opentype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root{
+  --Poppins:"Poppins", sans-serif;
+  --PoppinsRegular: "PoppinsRegular", sans-serif ;
+  --InterRegular: "InterRegular", sans-serif;
+  --KarlaBold: "KarlaBold",sans-serif;
+}
+.container-card-group{
+  display: inline-block;
+}
+.container-form-i{
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.centrar-div{
+  z-index: 1;
+  margin-top: -64px;
+  margin-left: -33vw;
 }

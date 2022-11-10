@@ -1,0 +1,196 @@
+
+.head-description {
+    padding: 9px 0px;
+    display: flex;
+}
+
+.text-desc {
+    width: 224px;
+    height: 32px;
+    font-family: var(--Poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    margin-left: 28px;
+    margin-top: -7px;
+}
+
+.number-pk {
+    width: 32px;
+    height: 32px;
+    font-family: var(--Poppins);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-left: 50px;
+    margin-top: -6px;
+}
+
+.poke-ball {
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    left: 166px;
+    top: 8px;
+}
+
+.container-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 56px 20px 0px;
+    gap: 16px;
+    position: absolute;
+    width: 344px;
+    height: 241px;
+    left: 4px;
+    top: 228px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.container-nav {
+    display: flex;
+    text-align: center;
+    margin-left: 82px;
+}
+
+.nav-info {
+    display: flex;
+    padding: 2px 8px;
+    width: 46px;
+    background: #74CB48;
+    border-radius: 10px;
+    font-family: var(--Poppins);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left: 19px
+}
+
+.h2-about {
+    margin-left: 148px;
+    width: 312px;
+    height: 16px;
+    font-family: var(--Poppins);
+    font-size: 14px;
+    color: #74CB48;
+}
+
+.container-inf-desc {
+    display: flex;
+    margin-top: 3vw;
+}
+
+.icon-info {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 68px;
+    top: 139px;
+}
+
+.position {
+    left: 179px;
+    width: 8px;
+}
+
+.description-1 {
+    width: 30px;
+    height: 16px;
+    font-family: var(--Poppins);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #212121;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.description-2 {
+    position: absolute;
+    width: 54px;
+    font-family: var(--Poppins);
+    font-style: normal;
+    text-align: center;
+    color: #666666;
+    margin-top: 1px;
+}
+
+.separator-line {
+    background: #E0E0E0;
+    position: absolute;
+    height: 48px;
+    width: 1px;
+    margin-top: -51px;
+    margin-left: 130px;
+}
+
+.separator-line-1 {
+    margin-left: 248px;
+}
+
+.justify {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    margin-left: 59px;
+}
+
+.desc-info {
+    width: 312px;
+    height: 32px;
+    font-family: var(--PoppinsRegular);
+    font-size: 10px;
+    line-height: 16px;
+    align-items: center;
+    text-align: justify;
+    color: #212121;
+    margin-left: 13px;
+}
+.buton-delete{
+    position: absolute;
+    width: 250px;
+    height: 55px;
+    left: 70px;
+    top: 324px;
+    background: #9B51E0;
+    border-radius: 100px;
+    font-family: var(--KarlaBold);
+    font-style: normal;
+    font-weight: 700;
+    border-style: hidden;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.pokemon{
+    z-index: 1;
+    width: 189px;
+    position: absolute;
+    height: 196px;
+    left: 27%;
+
+}
