@@ -15,7 +15,7 @@ export const NewPokemon = () => {
                 <form onSubmit={handleSubmit(onResetInput)}>
                     <div className="colum-input">
                         <label className="label-form">Number</label>
-                        <input className="input-form" type="number" name="number"
+                         <input className="input-form" type="number" name="number"
                                value={number} {...register("number", {required: " The number is required"})}
                                onChange={onInputChange}
                                placeholder="Number" onKeyUp={() => {
@@ -35,13 +35,11 @@ export const NewPokemon = () => {
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Kind</label>
-                        <input className="input-form" type="text" name="kind"
-                               value={kind} {...register("kind", {required: " The kind is required"})}
-                               onChange={onInputChange}
-                               placeholder="Kind" onKeyUp={() => {
-                            trigger("kind")
-                        }}/>
-                        {errors.kind && (<small style={{color: "red"}}>{errors.kind.message}</small>)}
+                        <select className="input-form" name="kind">
+                            <option selected="Water">Water</option>
+                            <option>Fire</option>
+                            <option>Poison</option>
+                        </select>
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Weight</label>
