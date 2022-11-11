@@ -39,7 +39,7 @@ export const Home = () => {
                         </>
                         : <div className="container-form-i"><NewPokemon/></div>}
                 </> : <div className="" style={{background: "#74CB48"}}>
-                    <DescriptionPokemon stateH={id} dataP={data}/></div>}
+                    <DescriptionPokemon stateH={id} dataP={data} offDescription={setDescription}/></div>}
         </div>
     )
 }

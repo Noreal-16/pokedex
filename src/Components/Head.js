@@ -13,8 +13,10 @@ export const Head = ({stateF}) => {
     }
     return (
         <div className='container-head'>
+            <a href='/' className="link-home">
                 <img alt='' className="logo-pkb" src={poke_bola}/>
                 <h1 className="title-head">Pokédex</h1>
+            </a>
             {onButton &&
                 <a href="/" type="button" className="button-head" onClick={onHideButton}>
                     <img alt='' className="button-add" src={add_button}/></a>}

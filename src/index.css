@@ -35,3 +35,9 @@
   margin-top: -64px;
   margin-left: -33vw;
 }
+.link-home{
+  text-decoration: none;
+  display: flex;
+  color: #212121;
+  align-items: center;
+}

@@ -59,7 +59,7 @@ p {
     margin-top: auto;
     width: 88px;
     height: 16px;
-    font-family: 'Poppins';
+    font-family: var(--Poppins);
     font-style: normal;
     font-weight: 400;
     font-size: 10px;

@@ -1,55 +1,97 @@
-import React, {useState} from "react";
+import React from "react";
 import "../Assets/css/newPokemon.css";
-import {useForm} from "../Hooks/useForm";
+import {useFormPk} from "../Hooks/useFormPk";
+import {useForm} from "react-hook-form";
 
 export const NewPokemon = () => {
-    const {number, name, kind, weight, height, moves, image, color, onInputChange} = useForm({
-        number:'', name:'', kind:'', weight:'', height:'', moves:'', image:'', color:''
+    const {number, name, kind, weight, height, moves, image, color, onInputChange, onResetInput} = useFormPk({
+        number: '', name: '', kind: '', weight: '', height: '', moves: '', image: '', color: ''
     })
+    const {register, handleSubmit, trigger, formState: {errors}} = useForm();
     return (
         <>
             <h1 className=" title-form">New Pokemon</h1>
             <div>
-                <form>
+                <form onSubmit={handleSubmit(onResetInput)}>
                     <div className="colum-input">
                         <label className="label-form">Number</label>
-                        <input className="input-form" type="text" name="number" value={number} onChange={onInputChange}
-                               placeholder="Number"/>
+                        <input className="input-form" type="number" name="number"
+                               value={number} {...register("number", {required: " The number is required"})}
+                               onChange={onInputChange}
+                               placeholder="Number" onKeyUp={() => {
+                            trigger("number")
+                        }}/>
+                        {errors.number && (<small style={{color: "red"}}>{errors.number.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Name</label>
-                        <input className="input-form" type="text" name="name" value={name} onChange={onInputChange}
-                               placeholder="Name Pokemon"/>
+                        <input className="input-form" type="text" name="name"
+                               value={name} {...register("name", {required: " The name is required"})}
+                               onChange={onInputChange}
+                               placeholder="Name Pokemon" onKeyUp={() => {
+                            trigger("name")
+                        }}/>
+                        {errors.name && (<small style={{color: "red"}}>{errors.name.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Kind</label>
-                        <input className="input-form" type="text" name="kind" value={kind} onChange={onInputChange}
-                               placeholder="Kind"/>
+                        <input className="input-form" type="text" name="kind"
+                               value={kind} {...register("kind", {required: " The kind is required"})}
+                               onChange={onInputChange}
+                               placeholder="Kind" onKeyUp={() => {
+                            trigger("kind")
+                        }}/>
+                        {errors.kind && (<small style={{color: "red"}}>{errors.kind.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Weight</label>
-                        <input className="input-form" type="text" name="weight" value={weight} onChange={onInputChange}
-                               placeholder="Weight"/>
+                        <input className="input-form" type="text" name="weight"
+                               value={weight} {...register("weight", {required: " The weight is required"})}
+                               onChange={onInputChange}
+                               placeholder="Weight" onKeyUp={() => {
+                            trigger("weight")
+                        }}/>
+                        {errors.weight && (<small style={{color: "red"}}>{errors.weight.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Height</label>
-                        <input className="input-form" type="text" name="height" value={height} onChange={onInputChange}
-                               placeholder="Height"/>
+                        <input className="input-form" type="text" name="height"
+                               value={height} {...register("height", {required: " The height is required"})}
+                               onChange={onInputChange}
+                               placeholder="Height" onKeyUp={() => {
+                            trigger("height")
+                        }}/>
+                        {errors.height && (<small style={{color: "red"}}>{errors.height.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Moves</label>
-                        <input className="input-form" type="text" name="moves" value={moves} onChange={onInputChange}
-                               placeholder="Moves"/>
+                        <input className="input-form" type="text" name="moves"
+                               value={moves} {...register("moves", {required: " The moves is required"})}
+                               onChange={onInputChange}
+                               placeholder="Moves" onKeyUp={() => {
+                            trigger("moves")
+                        }}/>
+                        {errors.moves && (<small style={{color: "red"}}>{errors.moves.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Image</label>
-                        <input className="input-form" type="text" name="image" value={image} onChange={onInputChange}
-                               placeholder="URL Image"/>
+                        <input className="input-form" type="text" name="image"
+                               value={image} {...register("image", {required: " The image is required"})}
+                               onChange={onInputChange}
+                               placeholder="URL Image" onKeyUp={() => {
+                            trigger("image")
+                        }}/>
+                        {errors.image && (<small style={{color: "red"}}>{errors.image.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Color</label>
-                        <input className="input-form" type="text" name="color" value={color} onChange={onInputChange}
-                               placeholder="#FFFFF"/>
+                        <input className="input-form" type="text" name="color"
+                               value={color} {...register("color", {required: " The color is required"})}
+                               onChange={onInputChange}
+                               placeholder="#FFFFF" onKeyUp={() => {
+                            trigger("color")
+                        }}/>
+                        {errors.color && (<small style={{color: "red"}}>{errors.color.message}</small>)}
                     </div>
                     <div className="colum-input">
                         <label className="label-form">Description</label>
