@@ -1,4 +1,11 @@
+
 # Getting Started with Create React App
+
+##Images the project Pokedex
+<p align="center">
+  <img width="505" height="477" src="https://postimg.cc/gallery/HgwC3WS">
+
+</p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
