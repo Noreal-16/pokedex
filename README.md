@@ -2,10 +2,9 @@
 # Getting Started with Create React App
 
 ##Images the project Pokedex
-<p align="center">
-  <img width="505" height="477" src="https://postimg.cc/gallery/HgwC3WS">
-
-</p>
+[![Screenshot-from-2022-11-12-09-46-39.png](https://i.postimg.cc/fLT3WNxv/Screenshot-from-2022-11-12-09-46-39.png)](https://postimg.cc/mcJZVKpc)
+[![Screenshot-from-2022-11-12-09-47-48.png](https://i.postimg.cc/XvgG0JyJ/Screenshot-from-2022-11-12-09-47-48.png)](https://postimg.cc/f3JTcMCn)
+[![Screenshot-from-2022-11-12-09-48-08.png](https://i.postimg.cc/26c1VKGN/Screenshot-from-2022-11-12-09-48-08.png)](https://postimg.cc/WFZNySx5)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

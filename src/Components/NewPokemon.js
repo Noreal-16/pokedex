@@ -4,7 +4,7 @@ import {useFormPk} from "../Hooks/useFormPk";
 import {useForm} from "react-hook-form";
 
 export const NewPokemon = () => {
-    const {number, name, kind, weight, height, moves, image, color, onInputChange, onResetInput} = useFormPk({
+    const {number, name, weight, height, moves, image, color, onInputChange, onResetInput} = useFormPk({
         number: '', name: '', kind: '', weight: '', height: '', moves: '', image: '', color: ''
     })
     const {register, handleSubmit, trigger, formState: {errors}} = useForm();
